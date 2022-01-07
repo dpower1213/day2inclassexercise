@@ -1,27 +1,25 @@
-body,html {
-    height: 100vh;
-    width: 100vh;
+body{ 
+    margin:0px;
+    padding:0px;
     background-color:white;
-}
-
-.grid-container{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-template-rows: 30% 30%;
-    grid-column-gap: 25%;
-    grid-row-gap: 50%;
-    margin: 100px;
-
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "beatsdre amazon apple adidas"
+    "adidas apple amazon beatsdre";
 }
 
-.beatsdre {
+.beatsdre { 
+    grid-area: beatsdre;
     width: 125px;
     height: 125px;
-    object-fit: cover;
     padding-left: 12.5px;
 }
 
 .amazon {
+    grid-area: amazon;
     width: 200px;
     height: 100px;
     object-fit: cover;
@@ -29,6 +27,7 @@ body,html {
 }
 
 .apple {
+    grid-area: apple;
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -37,11 +36,11 @@ body,html {
 }
 
 .adidas {
+    grid-area: adidas;
     width: 150px;
     height: 100px;
     object-fit: cover;
 }
-
 
 
 
